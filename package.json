@@ -1,11 +1,26 @@
 {
   "name": "@mattnick/editorjsparser",
   "version": "1.0.0",
-  "description": "",
+  "description": "Foobar is a Python library for dealing with word pluralization.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "M. Nick",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattnick89/editorjsparser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattnick89/editorjsparser/issues"
+  },
+  "homepage": "https://github.com/mattnick89/editorjsparser#readme",
+  "keywords": [
+    "Editor-js",
+    "EditorJS",
+    "Parsing",
+    "Blocks",
+    "Parser"
+  ]
 }
