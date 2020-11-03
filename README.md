@@ -1,6 +1,6 @@
 # EditorJS Parser
 
-Foobar is a Python library for dealing with word pluralization.
+EditorJS Parser is a small tool used to format blocks created from Editor.js
 
 ## Installation
 
