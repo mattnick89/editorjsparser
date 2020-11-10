@@ -30,6 +30,12 @@ class EditorJsParser {
                 case "poll":
                     html = this._parsePoll(block, withClass)
                 break;
+                case "linkTool":
+                    html = this._parseLinkTool(block, withClass);
+                break;
+                case "survey":
+                    html = this._parseSurvey(block);
+                break;
                 default:
                     html = block;
                 break;
@@ -86,6 +92,7 @@ class EditorJsParser {
         let c = this._parseClass(withClass);
         let html = {};
         html.is_empty = true;
+        html.type = "paragraph";
         if(block && block.data && block.data.text){
             if(block.data.text.trim() != ""){ html.is_empty = false; }
             html.text = block.data.text.trim();
@@ -241,6 +248,39 @@ class EditorJsParser {
             if(block.data.poll.answers.length > 0){ html.is_empty = false; }
         }
 
+        return html;
+    }
+
+    _parseLinkTool(block, withClass){
+        let c = this._parseClass(withClass);
+        let html = {};
+        html.type = "linkTool";
+        html.is_empty = true;
+        if(block.success && block.success == 1){
+            html.is_empty = false;
+            html.meta = block.meta;
+        }
+        return html;
+    }
+
+    _parseSurvey(block){
+        let html = {};
+        html.type = "survey";
+        html.is_empty = true;
+        if(block){
+            if(block.data){
+                html.is_empty = false;
+                if(block.data.title){
+                    html.title = block.data.tile;
+                }
+                if(block.data.link){
+                    html.link = block.data.link;
+                }
+                if(block.data.fields){
+                    html.fields = block.data.fields;
+                }
+            }
+        }
         return html;
     }
     
