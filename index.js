@@ -245,6 +245,7 @@ class EditorJsParser {
         if(block && block.data && block.data.poll){
             html.question = block.data.poll.question;
             html.answers = block.data.poll.answers;
+            html.showResults = (block.data.poll.showResults) ? true : false;
             if(block.data.poll.answers.length > 0){ html.is_empty = false; }
         }
 
