@@ -272,7 +272,7 @@ class EditorJsParser {
             if(block.data){
                 html.is_empty = false;
                 if(block.data.title){
-                    html.title = block.data.tile;
+                    html.title = block.data.title;
                 }
                 if(block.data.link){
                     html.link = block.data.link;
