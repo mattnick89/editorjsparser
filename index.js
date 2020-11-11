@@ -280,6 +280,9 @@ class EditorJsParser {
                 if(block.data.fields){
                     html.fields = block.data.fields;
                 }
+                if(block.data.id){
+                    html.id = block.data.id;
+                }
             }
         }
         return html;
